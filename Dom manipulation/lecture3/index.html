@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object modal part3</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+
+    </ul>
+    <script >
+        // i want to add more element in ul
+        function addLanguage(langName){
+          let newElement = document.createElement("li");
+          console.log(newElement);
+          newElement.innerText=`${langName}`;
+          let parent = document.querySelector(".language");
+          parent.appendChild(newElement);
+        }
+         addLanguage("python");
+         addLanguage("ruby");
+        
+         function optiaddlanguage(langName){
+          let newElement = document.createElement("li");
+          newElement.appendChild(document.createTextNode(langName));
+          document.querySelector(".language").appendChild(newElement);
+         }
+         optiaddlanguage("typeScript");
+         optiaddlanguage("C#");
+    </script>
+
+</body>
+</html>
