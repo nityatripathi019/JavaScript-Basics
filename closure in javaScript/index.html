@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure in javaScript</title>
+    <style>
+        body{
+            background-color: #313131;
+        }
+    </style>
+</head>
+<body>
+ <button id="orange">Orange</button>
+ <button id="green">Green</button>
+ <button id="pink">Pink</button>
+
+</body>
+    <!-- <script>
+   //lexical scope in javaScript
+   function outer(){
+    let name = "Hitesh";
+    
+    function inner(){
+        console.log("inner:",name);
+    }
+    function inner2(){
+        console.log("inner2",name);
+    }
+    inner();
+    inner2();
+   } -->
+   
+    <!-- outer(); -->
+    <!-- </script> -->
+    <script>
+        //ex of closure
+    //     function makeFunction(){
+    //          const name = "Mozzila"
+    //         function displayName(){
+                
+    //             console.log(name);
+    //         }
+    //         return displayName;
+    //     }
+    //   let myFunc = makeFunction();
+    //   myFunc();
+
+    //real world ex of closure
+
+    // document.getElementById("orange").onclick=function (){
+    //   document.body.style.backgroundColor=`orange`;
+    // }
+    // document.getElementById("green").onclick=function(){
+    //     document.body.style.backgroundColor="green";
+    // }
+    // document.getElementById("pink").onclick=function(){
+    //     document.body.style.backgroundColor="pink"
+    // }
+
+    function changeBackgroundColor(color){
+        return function displayColor(){
+            document.body.style.backgroundColor=`${color}`;
+        }
+        
+    }
+    
+     
+        document.getElementById("orange").onclick=changeBackgroundColor("orange");
+    
+   
+    </script>
+
+
+</html>
