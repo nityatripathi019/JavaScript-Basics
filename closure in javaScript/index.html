@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
  <button id="pink">Pink</button>
 
 </body>
-    <!-- <script>
+    <script>
    //lexical scope in javaScript
    function outer(){
     let name = "Hitesh";
@@ -30,10 +30,10 @@
     inner();
     inner2();
    } -->
-   
-    <!-- outer(); -->
-    <!-- </script> -->
-    <script>
+
+<!-- outer(); -->
+<!-- </script> -->
+<!-- <script>
         //ex of closure
     //     function makeFunction(){
     //          const name = "Mozzila"
@@ -72,4 +72,22 @@
     </script>
 
 
-</html>
+</html> -->
+
+<!-- //closure:a closure is created when an inner function remebers and contionues to acess the variable of its outer fn even after outer fn has finshed its execution.this happens bcz of lexical scoping and how js handles function excution
+
+//practical use of closure 
+function counter() {
+  let count = 0;
+  return function incCount() {
+    count++;
+    return count;
+  }
+}
+
+let incCounter = counter();
+console.log("increament")
+console.log(incCounter());
+console.log(incCounter());
+console.log(incCounter());
+console.log(incCounter()); -->
